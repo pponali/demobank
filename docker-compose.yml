@@ -3,7 +3,7 @@ services:
     image: "ponaliprakash/account-service:v1"
     container_name: account_ms
     ports:
-      - "8080:8080"
+      - "8090:8090"
     deploy:
       resources:
         limits:
@@ -14,7 +14,7 @@ services:
     image: "ponaliprakash/card-service:v1"
     container_name: cards_ms
     ports:
-      - "8070:8080"
+      - "8080:8080"
     deploy:
       resources:
         limits:
@@ -25,7 +25,7 @@ services:
     image: "ponaliprakash/loan-service:v1"
     container_name: loans_ms
     ports:
-      - "8090:8080"
+      - "8090:8090"
     deploy:
       resources:
         limits:
