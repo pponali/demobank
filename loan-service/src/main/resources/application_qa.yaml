@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "welcome qa"
+  contactDetail:
+    name: "Qa"
+    email: "qa@gmail.com"
+  onCallSupport:
+    - (080) 000000
+    - (080) 111111

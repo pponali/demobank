@@ -71,7 +71,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <to>
-                        <image>ponaliprakash/${project.artifactId}:v1</image>
+                        <image>ponaliprakash/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>

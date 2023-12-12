@@ -17,3 +17,23 @@ spring:
   sql:
     init:
       mode: always
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yaml"
+
+  profiles:
+    active:
+     - "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "welcome "
+  contactDetail:
+    name: "John"
+    email: "john@gmail.com"
+  onCallSupport:
+    - (080) 123456
+    - (080) 987654

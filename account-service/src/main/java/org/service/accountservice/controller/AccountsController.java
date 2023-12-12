@@ -10,16 +10,21 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import org.service.accountservice.constants.AccountsConstants;
+import org.service.accountservice.dto.AccountsContactInfoDto;
 import org.service.accountservice.dto.CustomerDto;
 import org.service.accountservice.dto.ErrorResponseDto;
 import org.service.accountservice.dto.ResponseDto;
 import org.service.accountservice.service.IAccountsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 /**
@@ -35,6 +40,16 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path = "/api/v1", produces = {MediaType.APPLICATION_JSON_VALUE}, headers = "Accept=application/json")
 public class AccountsController {
+
+    @Value("${build.version}")
+    private String buildVersion;
+
+
+    @Autowired
+    Environment env;
+
+    @Autowired
+    AccountsContactInfoDto accountsContactInfoDto;
 
     private final IAccountsService accountsService;
 
@@ -157,5 +172,53 @@ public class AccountsController {
                     .status(HttpStatus.NO_CONTENT)
                     .body(Optional.empty());
         }
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get Build Info",
+            description = "validation for property changes."
+    )
+    @GetMapping(value = "/build-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<String> getBuildInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get version Info",
+            description = "validation for environment property changes."
+    )
+    @GetMapping(value = "/version-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<ArrayList<String>> getJavaVersion() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add(env.getProperty("JAVA_HOME"));
+        list.add(env.getProperty("MAVEN_HOME"));
+        return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get Contact Info",
+            description = "validation for property changes."
+    )
+    @GetMapping(value = "/contact-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<AccountsContactInfoDto> getContactInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
     }
 }

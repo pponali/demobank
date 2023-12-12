@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "welcome prod"
+  contactDetail:
+    name: "prod"
+    email: "prod@gmail.com"
+  onCallSupport:
+    - (080) 000000
+    - (080) 111111

@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "welcome default"
+  contactDetail:
+    name: "Default"
+    email: "default@gmail.com"
+  onCallSupport:
+    - (080) 000000
+    - (080) 111111
