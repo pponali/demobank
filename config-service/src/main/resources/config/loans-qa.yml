@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "welcome qa"
+  contactDetail:
+    name: "QA"
+    email: "QA@gmail.com"
+  onCallSupport:
+    - (080) 222222
+    - (080) 333333

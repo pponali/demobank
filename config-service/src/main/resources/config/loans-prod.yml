@@ -1,10 +1,10 @@
 build:
-  version: "2.0"
+  version: "3.0"
 
-cards:
+accounts:
   message: "welcome prod"
   contactDetail:
-    name: "prod"
+    name: "Prod"
     email: "prod@gmail.com"
   onCallSupport:
     - (080) 000000

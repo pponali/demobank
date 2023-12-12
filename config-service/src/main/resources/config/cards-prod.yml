@@ -1,7 +1,7 @@
 build:
   version: "3.0"
 
-cards:
+accounts:
   message: "welcome prod"
   contactDetail:
     name: "Prod"
