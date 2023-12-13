@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
@@ -14,7 +16,8 @@ import org.hibernate.annotations.GenericGenerator;
  */
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Loans extends BaseEntity{
 
     @Id

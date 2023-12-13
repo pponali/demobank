@@ -1,7 +1,9 @@
+server:
+  port: 8090
 build:
   version: "2.0"
 
-cards:
+loans:
   message: "welcome default"
   contactDetail:
     name: "Default"
@@ -9,3 +11,31 @@ cards:
   onCallSupport:
     - (080) 000000
     - (080) 111111
+spring:
+  profiles:
+    active: "prod"
+  application:
+    name: loans
+  config:
+    import: "optional:configserver:http://localhost:8072/"
+  rabbitmq:
+    port: 5672
+    host: "localhost"
+    username: "guest"
+    password: "guest"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+
+  endpoint:
+    health:
+      probes:
+        enabled: true

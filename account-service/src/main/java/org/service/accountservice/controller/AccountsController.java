@@ -38,7 +38,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "*", allowedHeaders = "*", maxAge = 3600, allowCredentials = "false")
 @Validated
 @RestController
-@RequestMapping(path = "/api/v1", produces = {MediaType.APPLICATION_JSON_VALUE}, headers = "Accept=application/json")
+@RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE}, headers = "Accept=application/json")
 public class AccountsController {
 
     @Value("${build.version}")

@@ -1,6 +1,8 @@
 package org.service.loanservice.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +17,12 @@ import java.util.Map;
 
 
 
-@Schema(description = "Loans Contact Info Dto", name = "LoansContactInfoDto")
+@Schema(description = "Loans Contact Info Dto", name = "Loans Contact Info Dto ")
 @ConfigurationProperties(prefix = "loans")
-public record LoansContactInfoDto(String message, Map<String, String> contactDetails, List<String> onCallSupport) {
+@Getter
+@Setter
+public class LoansContactInfoDto {
+    private String message;
+    private Map<String, String> contactDetail;
+    private List<String> onCallSupport;
 }

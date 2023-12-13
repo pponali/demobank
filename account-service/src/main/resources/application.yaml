@@ -1,4 +1,17 @@
+server:
+  port: 8080
 spring:
+  rabbitmq:
+    port: 5672
+    host: "localhost"
+    username: "guest"
+    password: "guest"
+  application:
+    name: accounts
+  profiles:
+    active: "prod"
+  config:
+    import: "optional:configserver:http://localhost:8072/"
   h2:
     console:
       enabled: true
@@ -17,14 +30,6 @@ spring:
   sql:
     init:
       mode: always
-  config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yaml"
-
-  profiles:
-    active:
-     - "prod"
 
 build:
   version: "1.0"
@@ -37,3 +42,15 @@ accounts:
   onCallSupport:
     - (080) 123456
     - (080) 987654
+    -
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+
