@@ -8,17 +8,22 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import org.service.cardservice.constants.CardsConstants;
+import org.service.cardservice.dto.CardsContactInfoDto;
 import org.service.cardservice.dto.CardsDto;
 import org.service.cardservice.dto.ErrorResponseDto;
 import org.service.cardservice.dto.ResponseDto;
 import org.service.cardservice.service.ICardsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 /**
  * @author Eazy Bytes
@@ -30,11 +35,25 @@ import org.springframework.web.bind.annotation.*;
 )
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
-@AllArgsConstructor
 @Validated
 public class CardsController {
 
-    private ICardsService iCardsService;
+    private final ICardsService iCardsService;
+
+    @Value("${build.version}")
+    private String buildVersion;
+
+    @Autowired
+    private final CardsContactInfoDto cardsContactInfoDto;
+
+    @Autowired
+    private final Environment env;
+
+    public CardsController(ICardsService iCardsService, CardsContactInfoDto cardsContactInfoDto, Environment env) {
+        this.iCardsService = iCardsService;
+        this.cardsContactInfoDto = cardsContactInfoDto;
+        this.env = env;
+    }
 
     @Operation(
             summary = "Create Card REST API",
@@ -159,6 +178,54 @@ public class CardsController {
                     .status(HttpStatus.EXPECTATION_FAILED)
                     .body(new ResponseDto(CardsConstants.STATUS_417, CardsConstants.MESSAGE_417_DELETE));
         }
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get Build Info",
+            description = "validation for property changes."
+    )
+    @GetMapping(value = "/build-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<String> getBuildInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get version Info",
+            description = "validation for environment property changes."
+    )
+    @GetMapping(value = "/version-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<ArrayList<String>> getJavaVersion() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add(env.getProperty("JAVA_HOME"));
+        list.add(env.getProperty("MAVEN_HOME"));
+        return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    @Operation(
+            method = "GET",
+            summary = "Get Contact Info",
+            description = "validation for property changes."
+    )
+    @GetMapping(value = "/contact-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    public ResponseEntity<CardsContactInfoDto> getContactInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(cardsContactInfoDto);
     }
 
 }
