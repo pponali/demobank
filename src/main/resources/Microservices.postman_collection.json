@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71,7 +71,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Mohan\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\",\n    \"accountsDto\": {\n        \"accountNumber\": 1105557729,\n        \"accountType\": \"Savings\",\n        \"branchAddress\": \"123 Main Street, New York\"\n    }\n}",
+							"raw": "{\n    \"name\": \"Madan Mohan\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\",\n    \"accountsDto\": {\n        \"accountNumber\": 1105557729,\n        \"accountType\": \"Savings\",\n        \"branchAddress\": \"123 Main Street, New York\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -849,7 +849,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -857,12 +857,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/accounts/api/create",
+							"raw": "http://localhost:8071/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"accounts",
 								"api",
@@ -878,12 +878,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/accounts/api/fetch?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/accounts/api/fetch?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"accounts",
 								"api",
@@ -916,7 +916,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -924,12 +924,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/create",
+							"raw": "http://localhost:8071/eazybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -946,12 +946,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/fetch?mobileNumber=4354437688",
+							"raw": "http://localhost:8071/eazybank/accounts/api/fetch?mobileNumber=4354437688",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -975,7 +975,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -983,12 +983,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/create",
+							"raw": "http://localhost:8071/eazybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1014,12 +1014,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/cards/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/eazybank/cards/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"cards",
@@ -1042,12 +1042,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/loans/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/eazybank/loans/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"loans",
@@ -1070,12 +1070,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/fetchCustomerDetails?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/eazybank/accounts/api/fetchCustomerDetails?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1098,12 +1098,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/contact-info",
+							"raw": "http://localhost:8071/eazybank/accounts/api/contact-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1120,12 +1120,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/loans/api/contact-info",
+							"raw": "http://localhost:8071/eazybank/loans/api/contact-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"loans",
@@ -1142,12 +1142,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/build-info",
+							"raw": "http://localhost:8071/eazybank/accounts/api/build-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1164,12 +1164,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/java-version",
+							"raw": "http://localhost:8071/eazybank/accounts/api/java-version",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1244,12 +1244,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/contact-info",
+							"raw": "http://localhost:8071/eazybank/accounts/api/contact-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1266,12 +1266,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/cards/api/java-version",
+							"raw": "http://localhost:8071/eazybank/cards/api/java-version",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"cards",
@@ -1288,12 +1288,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/loans/api/build-info",
+							"raw": "http://localhost:8071/eazybank/loans/api/build-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"loans",
@@ -1311,7 +1311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1319,12 +1319,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/create",
+							"raw": "http://localhost:8071/eazybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1387,7 +1387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437688\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437688\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1395,12 +1395,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/create",
+							"raw": "http://localhost:8071/eazybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1471,12 +1471,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/cards/api/create?mobileNumber=4354437688",
+							"raw": "http://localhost:8071/eazybank/cards/api/create?mobileNumber=4354437688",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"cards",
@@ -1544,12 +1544,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/loans/api/create?mobileNumber=4354437688",
+							"raw": "http://localhost:8071/eazybank/loans/api/create?mobileNumber=4354437688",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"loans",
@@ -1643,7 +1643,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1651,12 +1651,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/create",
+							"raw": "http://localhost:8071/eazybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1752,12 +1752,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/eazybank/cards/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/eazybank/cards/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"cards",
@@ -1850,12 +1850,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/loans/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8071/eazybank/loans/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"loans",
@@ -1878,12 +1878,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/eazybank/accounts/api/fetchCustomerDetails?mobileNumber=4354437688",
+							"raw": "http://localhost:8071/eazybank/accounts/api/fetchCustomerDetails?mobileNumber=4354437688",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8072",
+							"port": "8071",
 							"path": [
 								"eazybank",
 								"accounts",
@@ -1912,7 +1912,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1940,7 +1940,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1968,7 +1968,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@ponaliprakash\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

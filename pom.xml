@@ -51,10 +51,10 @@
     </build>
 
     <modules>
-        <module>account-service</module>
-        <module>loan-service</module>
-        <module>card-service</module>
-        <module>config-service</module>
+        <module>accounts</module>
+        <module>loans</module>
+        <module>cards</module>
+        <module>configserver</module>
     </modules>
 
     <packaging>pom</packaging>
