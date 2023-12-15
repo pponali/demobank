@@ -103,7 +103,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>ponaliprakash/${project.artifactId}:s7</image>
+						<image>ponaliprakash/${project.artifactId}:s8</image>
 					</to>
 				</configuration>
 			</plugin>
