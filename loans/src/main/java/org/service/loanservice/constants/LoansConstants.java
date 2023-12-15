@@ -1,4 +1,4 @@
-package org.service.loanservice;
+package org.service.loanservice.constants;
 
 /**
  * @Author Prakash Ponali (@pponali)

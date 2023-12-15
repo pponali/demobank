@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
-import org.service.loanservice.LoansConstants;
+import org.service.loanservice.constants.LoansConstants;
 import org.service.loanservice.dto.ErrorResponseDto;
 import org.service.loanservice.dto.LoansContactInfoDto;
 import org.service.loanservice.dto.LoansDto;

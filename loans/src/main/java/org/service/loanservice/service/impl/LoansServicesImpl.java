@@ -2,7 +2,7 @@ package org.service.loanservice.service.impl;
 
 
 import org.service.loanservice.exception.ResourceNotFoundException;
-import org.service.loanservice.LoansConstants;
+import org.service.loanservice.constants.LoansConstants;
 import org.service.loanservice.dto.LoansDto;
 import org.service.loanservice.exception.LoanAlreadyExistsException;
 import org.service.loanservice.mapper.LoansMapper;

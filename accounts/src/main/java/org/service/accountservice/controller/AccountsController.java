@@ -10,11 +10,9 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import org.service.accountservice.constants.AccountsConstants;
-import org.service.accountservice.dto.AccountsContactInfoDto;
-import org.service.accountservice.dto.CustomerDto;
-import org.service.accountservice.dto.ErrorResponseDto;
-import org.service.accountservice.dto.ResponseDto;
+import org.service.accountservice.dto.*;
 import org.service.accountservice.service.IAccountsService;
+import org.service.accountservice.service.ICustomerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -47,13 +45,15 @@ public class AccountsController {
 
     @Autowired
     Environment env;
+    private final ICustomerDetailsService customerDetailsService;
 
     @Autowired
     AccountsContactInfoDto accountsContactInfoDto;
 
     private final IAccountsService accountsService;
 
-    public AccountsController(IAccountsService accountsService) {
+    public AccountsController(ICustomerDetailsService customerDetailsService, IAccountsService accountsService) {
+        this.customerDetailsService = customerDetailsService;
         this.accountsService = accountsService;
     }
 
@@ -101,7 +101,7 @@ public class AccountsController {
             @Pattern(regexp = "(^$|[0-9]{10})",
                     message = "Mobile number should not contain the special chars.")
             String mobileNumber) {
-        ;
+        customerDetailsService.fetchCustomerDetails(mobileNumber);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(accountsService.fetchAccount(mobileNumber));
@@ -221,4 +221,18 @@ public class AccountsController {
     public ResponseEntity<AccountsContactInfoDto> getContactInfo() {
         return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
     }
+
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "success response"),
+            @ApiResponse(responseCode = "500", description = "failure response")
+    })
+    @GetMapping(value = "/fetchCustomerDetails", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(@RequestParam String mobileNumber){
+        return ResponseEntity.status(HttpStatus.OK).body(customerDetailsService.fetchCustomerDetails(mobileNumber));
+
+    }
+
+
+
 }

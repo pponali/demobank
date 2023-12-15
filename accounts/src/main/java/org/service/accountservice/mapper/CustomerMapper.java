@@ -1,5 +1,6 @@
 package org.service.accountservice.mapper;
 
+import org.service.accountservice.dto.CustomerDetailsDto;
 import org.service.accountservice.dto.CustomerDto;
 import org.service.accountservice.model.Customer;
 
@@ -24,5 +25,20 @@ public class CustomerMapper {
         customerDto.setMobileNumber(customer.getMobileNumber());
         customerDto.setEmail(customer.getEmail());
         return customerDto;
+    }
+
+    public static Customer mapToCustomerDetailsDto(CustomerDetailsDto customerDetailsDto, Customer customer) {
+        //customer.setCustomerId(customerDto.getCustomerId());
+        customer.setMobileNumber(customerDetailsDto.getMobileNumber());
+        customer.setName(customerDetailsDto.getName());
+        customer.setEmail(customerDetailsDto.getEmail());
+        return customer;
+    }
+
+    public static CustomerDetailsDto mapToCustomerDetailsDto(Customer customer, CustomerDetailsDto customerDetailsDto) {
+        customerDetailsDto.setName(customer.getName());
+        customerDetailsDto.setMobileNumber(customer.getMobileNumber());
+        customerDetailsDto.setEmail(customer.getEmail());
+        return customerDetailsDto;
     }
 }
