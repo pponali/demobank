@@ -10,7 +10,7 @@
 	<artifactId>eurekaserver</artifactId>
 	<packaging>jar</packaging>
 	<name>eurekaserver</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Service Discovery agent for Bank microservices</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>

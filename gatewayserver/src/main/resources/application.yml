@@ -21,7 +21,16 @@ management:
   endpoint:
     gateway:
       enabled: true
-
+    health:
+      probes:
+        enabled: true
+    shutdown:
+      enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
   info:
     env:
       enabled: true
@@ -31,6 +40,10 @@ info:
     name: "gatewayserver"
     description: "Bank Gateway Server Application"
     version: "1.0.0"
+
+endpoints:
+  shutdown:
+    enabled: true
 
 logging:
   level:

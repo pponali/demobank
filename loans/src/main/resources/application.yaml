@@ -24,7 +24,7 @@ spring:
 build:
   version: "1.0"
 
-accounts:
+loans:
   message: "welcome "
   contactDetail:
     name: "John"
@@ -46,6 +46,9 @@ management:
   endpoint:
     shutdown:
       enabled: true
+    health:
+      probes:
+        enabled: true
   info:
     env:
       enabled: true

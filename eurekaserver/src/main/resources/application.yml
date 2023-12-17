@@ -10,12 +10,11 @@ management:
       exposure:
         include: "*"
   health:
-    livenessstate:
+    readiness-state:
       enabled: true
-    readinessstate:
+    liveness-state:
       enabled: true
   endpoint:
     health:
       probes:
         enabled: true
-
