@@ -32,7 +32,7 @@ accounts:
   onCallSupport:
     - (080) 123456
     - (080) 987654
-    -
+
 management:
   endpoint:
     shutdown:
@@ -63,6 +63,13 @@ eureka:
       defautZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
+
+
+logging:
+  level:
+    org:
+      service:
+        cards: DEBUG
 
 
 

@@ -70,3 +70,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
 
+logging:
+  level:
+    org:
+      service:
+        loans: DEBUG
+

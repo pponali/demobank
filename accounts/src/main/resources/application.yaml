@@ -70,3 +70,8 @@ info:
     description: "accounts service"
     version: "1.0"
 
+logging:
+  level:
+    org:
+      service:
+        accounts: DEBUG

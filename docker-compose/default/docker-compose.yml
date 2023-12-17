@@ -2,7 +2,7 @@ services:
 
 
   configserver:
-    image: "ponaliprakash/configserver:s8"
+    image: "ponaliprakash/configserver:s9"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -17,7 +17,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "ponaliprakash/eurekaserver:s8"
+    image: "ponaliprakash/eurekaserver:s9"
     container_name: eurekaserver-ms
     ports:
       - "8761:8761"
@@ -34,7 +34,7 @@ services:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
   accounts:
-    image: "ponaliprakash/accounts:s8"
+    image: "ponaliprakash/accounts:s9"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -45,7 +45,7 @@ services:
       service: microservice-eureka-config
 
   loans:
-    image: "ponaliprakash/loans:s8"
+    image: "ponaliprakash/loans:s9"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -56,7 +56,7 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "ponaliprakash/cards:s8"
+    image: "ponaliprakash/cards:s9"
     container_name: cards-ms
     ports:
       - "9000:9000"
