@@ -34,12 +34,12 @@ public class RequestTraceFilter implements GlobalFilter {
 
         HttpHeaders requestHeaders = exchange.getRequest().getHeaders();
         if (isCorrelationIdPresent(requestHeaders)) {
-            log.debug("eazyBank-correlation-id found in RequestTraceFilter : {}",
+            log.debug("X-Request-Trace-Id found in RequestTraceFilter : {}",
                     filterUtility.getCorrelationId(requestHeaders));
         } else {
             String correlationID = generateCorrelationId();
             exchange = filterUtility.setCorrelationId(exchange, correlationID);
-            log.debug("eazyBank-correlation-id generated in RequestTraceFilter : {}", correlationID);
+            log.debug("X-Request-Trace-Id generated in RequestTraceFilter : {}", correlationID);
         }
         return chain.filter(exchange);
     }

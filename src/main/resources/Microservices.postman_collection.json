@@ -266,7 +266,7 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "eazybank-correlation-id",
+								"key": "X-Request-Trace-Id",
 								"value": "43gtrt-trtrrtgf",
 								"type": "text"
 							}

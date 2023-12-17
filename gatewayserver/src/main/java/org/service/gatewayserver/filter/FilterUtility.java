@@ -18,8 +18,8 @@ public class FilterUtility {
     public static final String X_REQUEST_TRACE_ID = "X-Request-Trace-Id";
 
     public String getCorrelationId(HttpHeaders headers) {
-        headers.getFirst("X-Request-Trace-Id");
-         if(headers.get("X-Request-Trace-Id") != null){
+        headers.getFirst(X_REQUEST_TRACE_ID);
+         if(headers.get(X_REQUEST_TRACE_ID) != null){
              List<String> correlationId = headers.get(X_REQUEST_TRACE_ID);
              return  correlationId.stream().findFirst().get();
          } else {
