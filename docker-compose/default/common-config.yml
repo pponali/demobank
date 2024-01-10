@@ -29,4 +29,4 @@ services:
       eurekaserver:
         condition: service_healthy
     environment:
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8761/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8761/eureka

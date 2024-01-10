@@ -1,6 +1,3 @@
-server:
-  port: 8060
-
 spring:
   application:
     name: "gatewayserver"
@@ -8,9 +5,14 @@ spring:
     import: "optional:configserver:http://localhost:8071/"
   cloud:
     gateway:
+      routes:
+        - id: path_route
+          uri: https://example.org
+          predicates:
+            - Path=/red/{segment},/blue/{segment}
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lowerCaseServiceId: true
 
 management:
@@ -35,17 +37,7 @@ management:
     env:
       enabled: true
 
-info:
-  app:
-    name: "gatewayserver"
-    description: "Bank Gateway Server Application"
-    version: "1.0.0"
 
-endpoints:
-  shutdown:
-    enabled: true
 
-logging:
-  level:
-    org:
-      service: DEBUG
+
+

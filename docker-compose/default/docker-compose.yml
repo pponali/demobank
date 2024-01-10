@@ -33,11 +33,12 @@ services:
     environment:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
+
   gatewayserver:
     image: "ponaliprakash/gatewayserver:s9"
     container_name: gatewayserver-ms
     ports:
-      - "8060:8060"
+      - "8072:8072"
     depends_on:
       accounts:
         condition: service_healthy
@@ -47,7 +48,7 @@ services:
         condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "gatewayserver"
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8761/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8761/eureka
     extends:
       file: common-config.yml
       service: microservice-eureka-config
