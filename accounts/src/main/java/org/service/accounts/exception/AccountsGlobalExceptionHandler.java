@@ -25,7 +25,6 @@ import java.util.Map;
  */
 
 @RestControllerAdvice
-
 public class AccountsGlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
 
