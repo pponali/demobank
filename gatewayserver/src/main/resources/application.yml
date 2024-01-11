@@ -8,9 +8,14 @@ spring:
     import: "optional:configserver:http://localhost:8071/"
   cloud:
     gateway:
+      routes:
+        - id: path_route
+          uri: https://example.org
+          predicates:
+            - Path=/red/{segment},/blue/{segment}
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lowerCaseServiceId: true
 
 eureka:
