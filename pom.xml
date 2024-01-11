@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.service</groupId>
-    <artifactId>bankrepo</artifactId>
+    <artifactId>demobank</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bankrepo</name>
     <description>demobank</description>
